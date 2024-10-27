@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <!-- Style tags to make it better looking -->
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9};
+
+        h2 {
+            color: #333};
+
+        label, p {
+            margin: 10px 0;
+            display: block};
+
+        select, input[type="number"], button {
+            padding: 5px;
+            margin: 5px 0;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 3px};
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer};
+
+        button:hover {
+            background-color: #0056b3}
+    </style>
+</head>
+<body>
+    <h2>Place Your Order</h2>
+    
+    <!-- Task 1: Setup HTML Structure for Order Form -->
+    <label for="product-selector">Select a Product:</label>
+    <!-- Dropdown selector-->
+    <select id="product-selector">
+        <option value="10">Product A - $10</option>
+        <option value="15">Product B - $15</option>
+        <option value="20">Product C - $20</option>
+    </select>
+    
+    <label for="quantity">Quantity:</label>
+    <!--Input the quantity desired-->
+    <input type="number" id="quantity" value="1" min="1">
+    
+    <p>Total Price: $<span id="total-price">10</span></p>
+    
+    <button id="place-order">Place Order</button>
+    
+    <p id="order-summary"></p>
+    <!--link to javascript file-->
+    <script src="main.js"></script>
+</body>
