@@ -13,7 +13,7 @@ function updatePriceDisplay() {
     const totalPrice = productPrice * quantity; //get total price
     totalPriceElement.textContent = totalPrice.toFixed(2)}; // Update display total price
 
-// Event listeners for product selection and quantity input
+    // Event listeners for product selection and quantity input
 productSelector.addEventListener('change', updatePriceDisplay);
 quantityInput.addEventListener('input', updatePriceDisplay);
 
@@ -28,4 +28,10 @@ function calculateTotalPrice() {
 productSelector.addEventListener('change', calculateTotalPrice);
 quantityInput.addEventListener('input', calculateTotalPrice);
 
-
+// Task 4: Handle Order Submission
+  
+placeOrderButton.addEventListener('click', function() {
+    const selectedProduct = productSelector.selectedOptions[0].text; // Get product name 
+    const quantity = quantityInput.value; // Get quantity entered
+    const totalPrice = totalPriceElement.textContent; // Get total price display
+    orderSummary.textContent = `You ordered ${quantity} of ${selectedProduct}. Total price: $${totalPrice}`});// Display order summary
