@@ -17,4 +17,15 @@ function updatePriceDisplay() {
 productSelector.addEventListener('change', updatePriceDisplay);
 quantityInput.addEventListener('input', updatePriceDisplay);
 
+//Task 3: Calculate Total Price Dynamically
+   
+function calculateTotalPrice() {
+    const productPrice = productSelector.value; // Get price of selected product
+    const quantity = quantityInput.value; // Get quantity entered by user
+    const totalPrice = productPrice * quantity; // Calculate total price
+    totalPriceElement.textContent = totalPrice.toFixed(2)}; // Update display of total price
+// Use calculateTotalPrice when there are changes
+productSelector.addEventListener('change', calculateTotalPrice);
+quantityInput.addEventListener('input', calculateTotalPrice);
+
 
